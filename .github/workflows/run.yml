@@ -1,14 +1,12 @@
-name: Cloud189Checkin1
-
+name: deta PP下载alist上传
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  watch:
-    types: started
-  schedule:
-    - cron: 1 0 * * *
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      Folder:
+        description: '保存目录'
+        required: true
+        default: '202312'
 
 jobs:
   Cloud189Checkin:
